@@ -88,21 +88,25 @@ extern "C" __declspec(dllexport) MiniSerial* Export(){
     }
     
      void MiniSerial::SetBaudRate(long baudrate){
-        
-                 if (baudrate < 300)    baud = CBR_110;
-            else if (baudrate < 600)    baud = CBR_300;
-            else if (baudrate < 1200)   baud = CBR_600;
-            else if (baudrate < 2400)   baud = CBR_1200;
-            else if (baudrate < 4800)   baud = CBR_2400;
-            else if (baudrate < 9600)   baud = CBR_4800;
-            else if (baudrate < 14400)  baud = CBR_9600;
-            else if (baudrate < 19200)  baud = CBR_14400;
-            else if (baudrate < 38400)  baud = CBR_19200;
-            else if (baudrate < 57600)  baud = CBR_38400;
-            else if (baudrate < 115200) baud = CBR_57600;
-            else if (baudrate < 128000) baud = CBR_115200;
-            else if (baudrate < 256000) baud = CBR_128000;
-            else baud = CBR_256000;
+          baud = baudrate;   
+            //      if (baudrate < 300)    baud = CBR_110;
+            // else if (baudrate < 600)    baud = CBR_300;
+            // else if (baudrate < 1200)   baud = CBR_600;
+            // else if (baudrate < 2400)   baud = CBR_1200;
+            // else if (baudrate < 4800)   baud = CBR_2400;
+            // else if (baudrate < 9600)   baud = CBR_4800;
+            // else if (baudrate < 14400)  baud = CBR_9600;
+            // else if (baudrate < 19200)  baud = CBR_14400;
+            // else if (baudrate < 38400)  baud = CBR_19200;
+            // else if (baudrate < 57600)  baud = CBR_38400;
+            // else if (baudrate < 76800)  baud = CBR_57600;
+            // else if (baudrate < 115200) baud = CBR_76800;
+            // else if (baudrate < 128000) baud = CBR_115200;
+            // else if (baudrate < 256000) baud = CBR_128000;
+            // else if (baudrate < 230400) baud = CBR_256000;
+            // else if (baudrate < 256000) baud = CBR_230400;
+            // else if (baudrate < 460800) baud = CBR_256000;
+            // else baud = CBR_460800;
     }
     
      long MiniSerial::GetBaudRate(){
